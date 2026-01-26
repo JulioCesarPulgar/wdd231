@@ -79,38 +79,38 @@ const courses = [
 ]
 
 document.addEventListener('DOMContentLoaded', function () {
-    var listEl = document.getElementById('courses-list');
-    var creditsEl = document.getElementById('creditsTotal');
-    var filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
+  var listEl = document.getElementById('courses-list');
+  var creditsEl = document.getElementById('creditsTotal');
+  var filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
 
-    function render(filtered) {
-        if (!listEl) return;
-        listEl.innerHTML = '';
-        filtered.forEach(function (c) {
-            var card = document.createElement('div');
-            card.className = 'course-card' + (c.completed ? ' completed' : '');
-            card.innerHTML = '<strong>' + c.subject + ' ' + c.number + '</strong> — ' + c.title + '<div class="muted">Credits: ' + c.credits + ' • ' + (c.subject || '') + '</div>';
-            listEl.appendChild(card);
-        });
-        var total = filtered.reduce(function (acc, c) { return acc + (c.credits || 0); }, 0);
-        if (creditsEl) creditsEl.textContent = total;
-    }
-
-    function applyFilter(filter) {
-        var filtered = courses.filter(function (c) {
-            if (filter === 'all') return true;
-            return c.subject === filter;
-        });
-        render(filtered);
-    }
-
-    filterBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            filterBtns.forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            applyFilter(btn.dataset.filter);
-        });
+  function render(filtered) {
+    if (!listEl) return;
+    listEl.innerHTML = '';
+    filtered.forEach(function (c) {
+      var card = document.createElement('div');
+      card.className = 'course-card' + (c.completed ? ' completed' : '');
+      card.innerHTML = '<strong>' + c.subject + ' ' + c.number + '</strong> — ' + c.title + '<div class="muted">Credits: ' + c.credits + ' • ' + (c.subject || '') + '</div>';
+      listEl.appendChild(card);
     });
+    var total = filtered.reduce(function (acc, c) { return acc + (c.credits || 0); }, 0);
+    if (creditsEl) creditsEl.textContent = total;
+  }
 
-    applyFilter('all');
+  function applyFilter(filter) {
+    var filtered = courses.filter(function (c) {
+      if (filter === 'all') return true;
+      return c.subject === filter;
+    });
+    render(filtered);
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  applyFilter('all');
 });

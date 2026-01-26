@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Directory — Cabimas Chamber</title>
+  <meta name="description" content="Search the Cabimas Chamber business directory by name or category.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <div class="brand-row">
+        <img src="images/logo.svg" alt="Cabimas Chamber logo" class="logo">
+        <h1 class="brand">Business Directory</h1>
+      </div>
+      <button id="nav-toggle-directory" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container site-main">
+    <h2>Find Local Businesses</h2>
+    <div class="search-row">
+      <input id="directory-search" type="search" placeholder="Search businesses by name or category" aria-label="Search businesses">
+      <div class="filter-row">
+        <label>Category:</label>
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All</option>
+          <option value="Retail">Retail</option>
+          <option value="Food">Food</option>
+          <option value="Services">Services</option>
+          <option value="Travel">Travel</option>
+        </select>
+      </div>
+    </div>
+
+    <ul id="business-list" class="business-list">
+      <li class="business" data-name="Maracaibo Crafts" data-category="Retail"><h3 id="maracaibo-crafts">Maracaibo Crafts & Co.</h3><p>Artisan shop — Phone: +58 123 456 7890 — <a href="#">Website</a></p></li>
+      <li class="business" data-name="Lakefront Cafe" data-category="Food"><h3>Lakefront Cafe</h3><p>Coffee shop & light meals — Phone: +58 098 765 4321 — <a href="#">Menu</a></p></li>
+      <li class="business" data-name="Cabimas Auto" data-category="Services"><h3>Cabimas Auto Repairs</h3><p>Automotive repair and parts — Phone: +58 212 334 5566</p></li>
+      <li class="business" data-name="Golfo Travel" data-category="Travel"><h3>Golfo Travel Agency</h3><p>Tourism and excursions — Phone: +58 412 111 2222</p></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">© Cabimas Chamber — Directory</div>
+  </footer>
+</body>
+</html>

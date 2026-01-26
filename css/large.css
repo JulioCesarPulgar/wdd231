@@ -1,0 +1,7 @@
+@media (min-width:701px){
+  .site-main{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:start}
+  #about{grid-column:1/2}
+  #courses{grid-column:1/2}
+  #photo{grid-column:2/3}
+  .footer-grid{flex-direction:row;justify-content:space-between}
+}

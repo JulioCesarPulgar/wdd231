@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Maracaibo Crafts & Co.",
+        "address": "123 Market St, Timbuktu",
+        "phone": "+1 (555) 111-0001",
+        "website": "https://example.com/maracaibo",
+        "image": "biz1.svg",
+        "level": 3
+    },
+    {
+        "name": "Lakefront Cafe",
+        "address": "45 Shoreline Ave, Timbuktu",
+        "phone": "+1 (555) 111-0002",
+        "website": "https://example.com/lakefront",
+        "image": "biz2.svg",
+        "level": 2
+    },
+    {
+        "name": "Cabimas Auto Repairs",
+        "address": "8 Mechanic Rd, Timbuktu",
+        "phone": "+1 (555) 111-0003",
+        "website": "https://example.com/cabimasauto",
+        "image": "biz3.svg",
+        "level": 1
+    },
+    {
+        "name": "Golfo Travel Agency",
+        "address": "200 Harbour Blvd, Timbuktu",
+        "phone": "+1 (555) 111-0004",
+        "website": "https://example.com/golfo",
+        "image": "biz4.svg",
+        "level": 2
+    },
+    {
+        "name": "Desert Bloom Florist",
+        "address": "77 Flower Ln, Timbuktu",
+        "phone": "+1 (555) 111-0005",
+        "website": "https://example.com/florist",
+        "image": "biz5.svg",
+        "level": 1
+    },
+    {
+        "name": "Sahara Print Shop",
+        "address": "599 Print Ave, Timbuktu",
+        "phone": "+1 (555) 111-0006",
+        "website": "https://example.com/print",
+        "image": "biz6.svg",
+        "level": 3
+    },
+    {
+        "name": "Oasis Lodging",
+        "address": "1 Palm St, Timbuktu",
+        "phone": "+1 (555) 111-0007",
+        "website": "https://example.com/oasis",
+        "image": "biz7.svg",
+        "level": 1
+    }
+]

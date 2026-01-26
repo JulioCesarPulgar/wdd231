@@ -1,0 +1,4 @@
+@media (min-width:701px){
+  .site-header .container{display:flex;align-items:center;justify-content:space-between}
+  .footer-grid{flex-direction:row;justify-content:space-between;text-align:left}
+}

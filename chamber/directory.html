@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timbuktu Chamber — Directory</title>
+  <meta name="description" content="Directory of local businesses for the Timbuktu Chamber of Commerce. Find members by category, contact info, and membership level.">
+  <meta name="author" content="Julio Pulgar">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Timbuktu Chamber — Directory">
+  <meta property="og:description" content="Directory of local businesses for the Timbuktu Chamber of Commerce.">
+  <meta property="og:image" content="images/fb-image.png">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/directory.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-row">
+        <img src="images/favicon.svg" alt="Timbuktu Chamber logo" class="logo">
+        <h1 class="brand">Timbuktu Chamber</h1>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="../Site/discover.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="../Site/join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Directory</h1>
+    <p class="lead">Browse local businesses that are members of the Timbuktu Chamber. Toggle views and view contact details.</p>
+
+    <div class="controls">
+      <div class="view-toggle" role="group" aria-label="View toggle">
+        <button id="gridBtn" class="view-btn active">Grid</button>
+        <button id="listBtn" class="view-btn">List</button>
+      </div>
+    </div>
+
+    <section id="members" class="members grid" aria-live="polite">
+      <div id="member-list" class="member-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@timbuktu.example">info@timbuktu.example</a></p>
+        <p>Phone: +1 (555) 555-5555</p>
+      </div>
+      <div>
+        <p>Julio Pulgar — WDD 231</p>
+        <p id="lastModified">Last Modified: </p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

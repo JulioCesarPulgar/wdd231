@@ -26,6 +26,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(-
 .brand-row{display:flex;align-items:center;gap:0.5rem}
 .logo{width:44px;height:44px}
 .site-name{font-weight:600}
+.main-nav{background:transparent}
 .nav{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem}
 .nav a{display:inline-block;padding:0.45rem 0.6rem;color:var(--accent);text-decoration:none;border-radius:6px}
 .nav a:hover,.nav a:focus{background:var(--hover-bg)}
@@ -34,6 +35,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(-
 .skip-link{position:absolute;left:-999px}
 .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:var(--black);color:var(--white);padding:0.25rem 0.5rem;border-radius:4px}
 .site-main{padding:1rem 0}
+.site-body{display:block}
 .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 0 var(--shadow-color);margin-bottom:1rem;border:1px solid var(--muted-border)}
 .student-photo{width:100%;max-width:220px;height:auto;display:block;border-radius:6px}
 .filters{display:flex;gap:0.5rem;margin:0.5rem 0}
@@ -49,4 +51,16 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(-
   .nav{display:none;position:absolute;right:1rem;top:64px;background:var(--card);padding:0.5rem;border-radius:8px;border:1px solid var(--muted-border);flex-direction:column}
   .nav.show{display:flex}
   .nav-toggle{display:block}
+  .site-body{display:block}
+}
+
+/* Desktop: make nav a left sidebar */
+@media (min-width:701px){
+  .site-body{display:grid;grid-template-columns:240px 1fr;gap:1rem;align-items:start}
+  .main-nav{grid-column:1/2;}
+  .site-main{grid-column:2/3}
+  .main-nav{background:#222;color:#fff;padding:1rem;border-radius:8px;height:100%}
+  .main-nav .nav{flex-direction:column;gap:0}
+  .main-nav .nav a{color:#fff;padding:0.75rem 1rem;border-radius:4px;display:block}
+  .main-nav .nav a:hover{background:rgba(255,255,255,0.06)}
 }
